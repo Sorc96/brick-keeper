@@ -67,6 +67,7 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
+  dry-container
   dry-types
   pry
   rom
