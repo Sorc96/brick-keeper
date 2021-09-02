@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Relations
-  class PartTypes < ROM::Relation[:sql]
+  class PartTypes < SqlRelation
     schema(:part_types, infer: true) do
       associations do
         has_many :parts
