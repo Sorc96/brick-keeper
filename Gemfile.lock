@@ -32,6 +32,7 @@ GEM
     pry (0.14.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
+    rake (13.0.6)
     rom (5.2.6)
       rom-changeset (~> 5.2, >= 5.2.3)
       rom-core (~> 5.2, >= 5.2.5)
@@ -70,6 +71,7 @@ DEPENDENCIES
   dry-container
   dry-types
   pry
+  rake
   rom
   rom-sql
   zeitwerk

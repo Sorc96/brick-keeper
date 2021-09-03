@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'rake'
+
 gem 'zeitwerk'
 
 gem 'dry-types'

@@ -9,6 +9,8 @@ config.register_relation Relations::PartTypes
 config.register_relation Relations::Parts
 config.register_relation Relations::Lots
 
+config.register_mapper Mappers::ItemsMapper
+
 container = ROM.container(config)
 container.gateways[:default].use_logger Logger.new($stdout)
 

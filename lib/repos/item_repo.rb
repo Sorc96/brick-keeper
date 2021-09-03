@@ -2,30 +2,16 @@
 
 module Repos
   class ItemRepo < ROM::Repository[:parts]
-    ITEM_MAPPER = ->(relation) {
-      relation.map do |data|
-        Entities::Item.new(
-          lots: data.lots.map(&LOT_MAPPER),
-          color: data.color.name,
-          part_type: data.part_type.name
-        )
-      end
-    }
-
-    LOT_MAPPER = ->(lot) {
-      if lot.unitprice.nil?
-        Entities::Lots::WithoutPriceInfo.new(lot)
-      else
-        Entities::Lots::WithPriceInfo.new(lot)
-      end
-    }
+    auto_struct false
 
     def find_by(color:, type:)
-      (parts >> ITEM_MAPPER)
+      parts
         .join(:colors)
         .join(:part_types)
-        .combine(:colors, :part_types, :lots)
+        .select(:id, colors[:name].as(:color), part_types[:name].as(:part_type))
+        .combine(:lots)
         .where { { colors[:name] => color, part_types[:name] => type } }
+        .map_with(:items_mapper)
         .one
     end
   end
