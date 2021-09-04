@@ -10,7 +10,7 @@ Start Brick Keeper with `ruby brick_keeper.rb`
 
 ## Insert manually
 
-Colors and part types are currently accessible only through relations
+Colors and part types are currently accessible only through relations.
 
 Use `db.relations[:colors].insert(name: 'Dark Tan')` to insert a color.
 
@@ -30,3 +30,5 @@ Use `find_part(color_name, part_type_name)` to get the full object representing 
 - Run the Javascript in `parse_order.js` in the browser console
 - Copy the output of the Javascript from the browser console into Brick Keeper and assign it to a variable
 - Run the import with `Import.call(data)`, where `data` is the variable from previous step
+
+Missing colors and part types will be created automatically.
