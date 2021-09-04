@@ -3,7 +3,7 @@ function parseRow(row) {
   const [color, partType] = parsePart(cells[2])
   const quantity = parseQuantity(cells[4])
   const unitprice = parseUnitprice(cells[5])
-  
+
   return [color, partType, quantity, unitprice]
 }
 
