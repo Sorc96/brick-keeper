@@ -26,7 +26,7 @@ end
 
 def format_item(part)
   formatter = TableFormatter.new
-  info_string = "#{part.color} #{part.part_type} | #{part.quantity} total | #{part.average_price.to_f} average per piece"
+  info_string = "#{part.color} #{part.part_type} | #{part.quantity} total | #{part.average_price.to_f.round(2)} average per piece"
   formatter.format(info_string)
 end
 

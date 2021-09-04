@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Import
-  ROW_TYPE = Types::Array.of(Types::String).constrained(size: 4)
+  ROW_TYPE = Types::Array.of(Types::String.constructor(&:strip)).constrained(size: 4)
   BATCH_TYPE = Types::Array.of(ROW_TYPE)
 
   class << self
