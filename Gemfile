@@ -6,6 +6,7 @@ gem 'zeitwerk'
 
 gem 'dry-types'
 gem 'dry-container'
+gem 'dry-initializer'
 
 gem 'rom'
 gem 'rom-sql'

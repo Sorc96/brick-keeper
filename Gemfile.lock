@@ -69,6 +69,7 @@ PLATFORMS
 
 DEPENDENCIES
   dry-container
+  dry-initializer
   dry-types
   pry
   rake
