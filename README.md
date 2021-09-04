@@ -4,6 +4,14 @@
 
 Brick Keeper is a basic command line tool for keeping track of LEGO bircks and how much they were bought for.
 
+## Installation
+
+- Clone the repo
+- Make sure you have Ruby and SQLite
+- cd into the directory
+- Run `bundle install` to install Ruby dependencies
+- Run `rake db:migrate` to setup the database
+
 ## Start
 
 Start Brick Keeper with `ruby brick_keeper.rb`
