@@ -61,6 +61,7 @@ GEM
       rom (~> 5.2, >= 5.2.1)
       sequel (>= 4.49)
     sequel (5.48.0)
+    sqlite3 (1.4.2)
     transproc (1.1.1)
     zeitwerk (2.4.2)
 
@@ -75,6 +76,7 @@ DEPENDENCIES
   rake
   rom
   rom-sql
+  sqlite3
   zeitwerk
 
 BUNDLED WITH

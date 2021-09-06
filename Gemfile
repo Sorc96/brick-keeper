@@ -11,4 +11,6 @@ gem 'dry-initializer'
 gem 'rom'
 gem 'rom-sql'
 
+gem 'sqlite3'
+
 gem 'pry'
